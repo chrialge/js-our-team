@@ -33,8 +33,15 @@ const team = [
     },
 ];
 
-for (let i = 0; i < team.length; i++) {
-  const member = team[i];
-  console.log(member.name, member.role, member.image)
-  
+const containerElement = document.getElementById('container')
+console.log(containerElement)
+for (const key in team) {
+  const member = team[key];
+  const name = member.name;
+  const role = member.role;
+  const image = member.image
+  console.log(member);
+  containerElement.innerHTML += name + " " + role + " " + image + " ";
+
+
 }
